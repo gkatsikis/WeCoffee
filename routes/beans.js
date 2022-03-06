@@ -7,6 +7,8 @@ import { isLoggedIn } from '../middleware/middleware.js'
 router.get('/', beansCtrl.index)
 // POST localhost:3000/
 router.post('/', isLoggedIn, beansCtrl.create)
+// GET localhost:3000/beans/:id
+router.get('/:id', beansCtrl.show)
 
 export {
   router

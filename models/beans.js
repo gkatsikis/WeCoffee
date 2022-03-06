@@ -8,7 +8,7 @@ const coffeeSchema = new Schema({
   region: String,
   varietal: [String],
   tasting: [String],
-  // reviews: [{ObjectId ref: "Review"}],
+  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review"}],
 })
 
 const Coffee = mongoose.model('Coffee', coffeeSchema)

@@ -1,7 +1,6 @@
 import { Coffee } from '../models/beans.js'
 
 function index(req, res) {
-  console.log('BEANNNNSSS')
   Coffee.find({})
   .then(beans => {
     res.render('beans/index', {
@@ -16,19 +15,32 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  console.log('Did it woooork?')
-  // req.body.owner = req.user.profile._id
-  // Coffee.create(req.body)
-  // .then(bean => {
-  //   res.redirect('/')
-  // })
-  // .catch(err => {
-  //   console.log(err)
-  //   res.redirect('/')
-  // })
+  req.body.owner = req.user.profile._id
+  Coffee.create(req.body)
+  .then(bean => {
+    res.redirect('/')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function show(req, res) {
+  Coffee.findById(req.params.id, function (err, beans) {
+    res.render('beans/show', {
+      title: 'Coffee Review',
+      beans,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/beans')
+  })
 }
 
 export {
   index,
   create,
+  show,
 }
