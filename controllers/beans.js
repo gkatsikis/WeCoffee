@@ -44,8 +44,12 @@ function show(req, res) {
 }
 
 function createReview(req, res) {
-  req.body.owner = req.user.profile._id
-  
+  Coffee.findById(req.params.id, function(err, coffee) {
+    coffee.reviews.push(req.body)
+    coffee.save(function(err) {
+      res.redirect(`/beans/${coffee._id}`)
+    })
+  })
 }
 
 export {
