@@ -12,6 +12,23 @@
     <h3>Reviews</h3>
     <p>PUT REVIEW AND RATING HERE</p>
     <% } %>
+    <% if (user) { %>
+      <h3>add a review</h3>
+      <form action='/beans/<%= bean._id %>' method="POST">
+      <label for="rating-select"> Rating:
+      </label>
+      <select name="rating" id="rating-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <label for="content-textarea">Review:
+      </label>
+      <textarea name="content" id="content-textarea" cols="30" rows="10"></textarea>
+      <button type="submit" class="button">share your review</button>
+      </form>
+      <% } %>
   </ul>
 
 </section>

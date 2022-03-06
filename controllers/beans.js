@@ -1,5 +1,4 @@
 import { Coffee } from '../models/beans.js'
-import { createReview } from './reviews.js'
 
 function index(req, res) {
   Coffee.find({})
@@ -17,7 +16,6 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  createReview(req, res)
   Coffee.create(req.body)
   .then(bean => {
     res.redirect('/')
@@ -45,8 +43,14 @@ function show(req, res) {
   })
 }
 
+function createReview(req, res) {
+  req.body.owner = req.user.profile._id
+  
+}
+
 export {
   index,
   create,
   show,
+  createReview,
 }

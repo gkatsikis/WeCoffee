@@ -9,6 +9,8 @@ router.get('/', beansCtrl.index)
 router.post('/', isLoggedIn, beansCtrl.create)
 // GET localhost:3000/beans/:id
 router.get('/:id', beansCtrl.show)
+// POST localhost:3000/beans/:id
+router.post('/:id', isLoggedIn, beansCtrl.createReview)
 
 export {
   router
