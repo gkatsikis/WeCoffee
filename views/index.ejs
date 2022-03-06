@@ -2,15 +2,35 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Welcome, <%= user ? user.profile.name : "Coffee Tribe" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
         src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
+        alt="<%= user.profile.name %> avatar" 
+        id="user-avatar"
       />
     </div>
   <% } %>
+  <h2>Add Some Beans</h2>
+  <form action="/beans" method="POST">
+    <label> Name:
+      <input type="text" name="name" id="bname" placeholder="What's it called?">
+    </label><br>
+    <label> Origin:
+      <input type="text" name="origin" id="origin" placeholder="Country">
+    </label><br>
+    <label> Region:
+      <input type="text" name="region" id="region" placeholder="Where within the country?">
+    </label><br>
+    <label> Varietal(s):
+      <input type="text" name="varietal" id="varietal" placeholder="separated by ', '">
+    </label><br>
+    <label> Tasting Notes:
+      <input type="text" name="tasting" id="tasting" placeholder="separated by ', '">
+    </label><br>
+    <button type="submit">Add Coffee</button>
+  </form>
 </main>
 
 <%- include('./partials/footer') %>

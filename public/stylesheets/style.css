@@ -41,3 +41,7 @@ main {
 h1 {
   font-size: 3.6rem;
 }
+
+#user-avatar {
+  border-radius: 50px;
+}

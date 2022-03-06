@@ -1,0 +1,17 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>All the Beans</h1>
+	<ul>
+  <% beans.forEach(bean => { %>
+    <li><%= bean.name %></li>
+    <li><%= bean.origin %></li>
+    <li><%= bean.region %></li>
+    <li><%= bean.varietal %></li>
+    <li><%= bean.tasting %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
