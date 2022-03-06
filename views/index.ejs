@@ -2,6 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
+  <% if (user) { %>
   <h1>Welcome, <%= user ? user.profile.name : "Coffee Tribe" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -29,8 +30,17 @@
     <label> Tasting Notes:
       <input type="text" name="tasting" id="tasting" placeholder="separated by ', '">
     </label><br>
+    <label> Rating:
+      <input type="number" name="rating" id="rating" placeholder="1-4" min="1" max="4">
+    </label><br>
+    <label> Review:
+      <input type="text" name="content" id="review" placeholder="What did you think of the coffee?">
+    </label><br>
     <button type="submit">Add Coffee</button>
   </form>
+  <% } else { %>
+  <h2>please login to add beans</h2>
+  <% } %>
 </main>
 
 <%- include('./partials/footer') %>

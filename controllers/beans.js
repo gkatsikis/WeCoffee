@@ -1,4 +1,5 @@
 import { Coffee } from '../models/beans.js'
+import { createReview } from './reviews.js'
 
 function index(req, res) {
   Coffee.find({})
@@ -16,6 +17,7 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
+  createReview(req, res)
   Coffee.create(req.body)
   .then(bean => {
     res.redirect('/')
@@ -27,10 +29,14 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  Coffee.findById(req.params.id, function (err, beans) {
-    res.render('beans/show', {
-      title: 'Coffee Review',
-      beans,
+  Coffee.findById(req.params.id)
+    // .then(beans => {
+    // res.redirect(`beans/${req.params.id}`)
+    // })
+  .then(bean => {
+    res.render(`beans/show`, {
+      bean,
+      title: "Reviews"
     })
   })
   .catch(err => {

@@ -5,13 +5,15 @@
   <h1>All the Beans</h1>
 	<ul class="beans">
   <% beans.forEach(bean => { %>
-    <h3><%= bean.name %></h3>
+    <h3><%= bean.name %> 
+    <%= bean.roaster ? 'by' : '' %>
+    <%= bean.roaster %></h3>
     <p>Origin: <%= bean.origin %></p>
     <p>Region: <%= bean.region %></p>
     <p>Varietal: <%= bean.varietal %></p>
     <p>Tasting: <%= bean.tasting %></p>
     <a 
-      href="/beans/<%= beans._id %>" 
+      href="/beans/<%= bean._id %>" 
     >Reviews</a>
   <% }) %>
   </ul>

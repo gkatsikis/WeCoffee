@@ -3,15 +3,15 @@
 
 <section>
 	<ul class="beans">
-  <% beans._id(bean => { %>
     <h3><%= bean.name %></h3>
     <p>Origin: <%= bean.origin %></p>
     <p>Region: <%= bean.region %></p>
     <p>Varietal: <%= bean.varietal %></p>
     <p>Tasting: <%= bean.tasting %></p>
+    <% if(bean.reviews.length) { %>
     <h3>Reviews</h3>
     <p>PUT REVIEW AND RATING HERE</p>
-  <% }) %>
+    <% } %>
   </ul>
 
 </section>
