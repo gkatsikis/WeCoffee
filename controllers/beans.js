@@ -1,4 +1,5 @@
 import { Coffee } from '../models/beans.js'
+import { Review } from '../models/reviews.js'
 
 function index(req, res) {
   Coffee.find({})
@@ -28,10 +29,9 @@ function create(req, res) {
 
 function show(req, res) {
   Coffee.findById(req.params.id)
-    // .then(beans => {
-    // res.redirect(`beans/${req.params.id}`)
-    // })
+  .populate('reviews')
   .then(bean => {
+    console.log(bean)
     res.render(`beans/show`, {
       bean,
       title: "Reviews"
@@ -43,14 +43,29 @@ function show(req, res) {
   })
 }
 
-function createReview(req, res) {
-  Coffee.findById(req.params.id, function(err, coffee) {
-    coffee.reviews.push(req.body)
-    coffee.save(function(err) {
-      res.redirect(`/beans/${coffee._id}`)
+// function createReview(req, res) {
+//   // show(req, res)
+//   // Coffee.findById(req.params.id)
+//   // .populate('review')
+//   // .exec(function(err, review) {
+//   //   res.render('beans/show', { title: 'Reviews', review})
+//   // })
+
+//   console.log(req.body)
+//   }
+
+  function createReview(req, res) {
+    Review.create(req.body)
+    .then(review => {
+      Coffee.findById(req.params.id, function(err, coffee) {
+        coffee.reviews.push(review._id)
+        coffee.save(function (err) {
+          res.redirect(`/beans/${coffee._id}`)
+        })
+      })
     })
-  })
-}
+  }
+
 
 export {
   index,
