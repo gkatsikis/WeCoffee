@@ -31,6 +31,16 @@ nav {
   justify-content: center;
 }
 
+.nav-bar {
+  padding: 30px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logout {
+  
+}
+
 main {
   display: flex;
   align-items: center;

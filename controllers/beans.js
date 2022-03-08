@@ -1,4 +1,7 @@
+import req from 'express/lib/request.js'
+import res from 'express/lib/response.js'
 import { Coffee } from '../models/beans.js'
+import { Profile } from '../models/profile.js'
 import { Review } from '../models/reviews.js'
 
 function index(req, res) {
@@ -29,7 +32,7 @@ function create(req, res) {
 
 function show(req, res) {
   Coffee.findById(req.params.id)
-  .populate('reviews')
+  .populate({path: 'reviews', populate: {path: 'owner'}})
   .then(bean => {
     console.log(bean)
     res.render(`beans/show`, {
@@ -43,20 +46,15 @@ function show(req, res) {
   })
 }
 
-// function createReview(req, res) {
-//   // show(req, res)
-//   // Coffee.findById(req.params.id)
-//   // .populate('review')
-//   // .exec(function(err, review) {
-//   //   res.render('beans/show', { title: 'Reviews', review})
-//   // })
-
-//   console.log(req.body)
-//   }
-
   function createReview(req, res) {
+    req.body.owner = req.user.profile._id
     Review.create(req.body)
     .then(review => {
+      Profile.findById(req.user.profile._id)
+      .then(profile => {
+        profile.reviews.push(review._id)
+        profile.save()
+      })
       Coffee.findById(req.params.id, function(err, coffee) {
         coffee.reviews.push(review._id)
         coffee.save(function (err) {
@@ -65,7 +63,6 @@ function show(req, res) {
       })
     })
   }
-
 
 export {
   index,

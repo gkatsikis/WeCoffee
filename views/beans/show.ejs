@@ -7,11 +7,11 @@
     <p>Origin: <%= bean.origin %></p>
     <p>Region: <%= bean.region %></p>
     <p>Varietal: <%= bean.varietal %></p>
-    <p>Tasting: <%= bean.tasting %></p>
+    <p>Tasting Notes: <%= bean.tasting %></p>
       <h3>Reviews</h3>
       <% bean.reviews.forEach(rev => { %>
         <div id="review">
-        <p><%= rev.owner %></p>
+        <p ><%= rev.owner.name %></p>
         <p>Rating: <%= rev.rating %> </p>
         <p>Review: <%= rev.content %> </p>
         </div>

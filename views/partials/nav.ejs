@@ -6,7 +6,13 @@
   <nav>
     <% if (user) { %>
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
+        <button class="mdc-button mdc-button--raised mdc-button--leading" type="submit">
+          <span class="mdc-button__ripple"></span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">logout</i>
+          <span class="mdc-button__label">logout</span>
+        </button>
+        <!-- <button type="submit" class="logout"><span class="material-icons-outlined">logout
+          </span></button> -->
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
@@ -15,15 +21,17 @@
         </button>
       </a>
     <% } %>
-    <i class="fa-solid fa-mug-hot"></i>
-    <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>home</a>  
+    <div class="nav-bar">
     <a 
-      href="" <%- title === 'Profile' ? 'class="active"' : '' %>
+    href="/" <%- title === 'Home' ? 'class="active"' : '' %>>home</a>  
+    <a 
+    href="" <%- title === 'Profile' ? 'class="active"' : '' %>
     >profile</a>
     <a 
-      href="/beans" <%- title === 'All Beans' ? 'class="active"' : '' %>
+    href="/beans" <%- title === 'All Beans' ? 'class="active"' : '' %>
     >all beans</a>
     <a 
-      href="" <%- title === 'Roasters' ? 'class="active"' : '' %>
+    href="" <%- title === 'Roasters' ? 'class="active"' : '' %>
     >roasters</a>
+  </div>
   </nav>
