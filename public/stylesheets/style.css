@@ -38,7 +38,7 @@ nav {
 }
 
 .logout {
-  
+
 }
 
 main {
@@ -54,4 +54,9 @@ h1 {
 
 #user-avatar {
   border-radius: 50px;
+}
+
+#review-owner {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

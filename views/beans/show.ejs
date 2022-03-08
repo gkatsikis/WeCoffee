@@ -11,9 +11,13 @@
       <h3>Reviews</h3>
       <% bean.reviews.forEach(rev => { %>
         <div id="review">
-        <p ><%= rev.owner.name %></p>
+          <form action="/beans/<%= bean._id %>/edit" method="GET">
+        <p id="review-owner"><%= rev.owner.name %></p>
         <p>Rating: <%= rev.rating %> </p>
         <p>Review: <%= rev.content %> </p>
+        <% if (bean.owner.equals(user?.profile._id)) { %>
+        <button class="btn" type="submit">edit review</button>
+      </form>
         </div>
         <% }) %>
     <% if (user) { %>
