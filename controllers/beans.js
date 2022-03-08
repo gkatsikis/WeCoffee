@@ -64,7 +64,40 @@ function show(req, res) {
     })
   }
 
+  function edit(req, res) {
+    Review.findById(req.params.id)
+    .then(review => {
+      console.log('LOOOOOOOOK LOOOOOOOOOOOOOOOOOOOOK', review._id)
+      res.render('beans/edit', {
+        review,
+        title: "edit"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/beans')
+  })
+}
+
+function update(req, res) {
+  Review.findByIdAndUpdate(req.params.id)
+  .then(review => {
+    if (review.owner.equals(req.user.profile._id)) {
+      review.updateOne(req.body, {new: true})
+      .then (() => {
+        res.redirect(`/beans`)
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/beans')
+  })
+}
+
 export {
+  update,
+  edit,
   index,
   create,
   show,

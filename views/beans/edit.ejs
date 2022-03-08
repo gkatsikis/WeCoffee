@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>edit your review</h1>
+  <form action="/beans/<%= review._id %>?_method=PUT" method="POST">
+    <label>
+      Name: 
+      <input 
+        type="text"
+        name="content" 
+        value="<%= review.content %>" 
+        autocomplete="off"
+      >
+    </label>
+    <button type="submit">Save</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
