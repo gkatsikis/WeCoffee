@@ -2,19 +2,19 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>All the Beans</h1>
+  <h1 class="info-top">All the Beans</h1>
 	<ul class="beans">
   <% beans.forEach(bean => { %>
-    <h3><%= bean.name %> 
-    <%= bean.roaster ? 'by' : '' %>
+    <h3 class="info-top"><%= bean.name %> 
+    by
     <%= bean.roaster %></h3>
-    <p>Origin: <%= bean.origin %></p>
-    <p>Region: <%= bean.region %></p>
-    <p>Varietal: <%= bean.varietal %></p>
-    <p>Tasting: <%= bean.tasting %></p>
+    <p class="info">Origin: <%= bean.origin %></p>
+    <p class="info">Region: <%= bean.region %></p>
+    <p class="info">Varietal: <%= bean.varietal %></p>
+    <p class="info">Tasting: <%= bean.tasting %></p>
     <a 
       href="/beans/<%= bean._id %>" 
-    >Reviews</a>
+    class="info">Reviews</a>
   <% }) %>
   </ul>
 </section>

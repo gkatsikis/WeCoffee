@@ -3,11 +3,13 @@
 
 <section>
 	<ul class="beans">
-    <h3><%= bean.name %></h3>
-    <p>Origin: <%= bean.origin %></p>
-    <p>Region: <%= bean.region %></p>
-    <p>Varietal: <%= bean.varietal %></p>
-    <p>Tasting Notes: <%= bean.tasting %></p>
+    <h3 class="bean-review-name"><%= bean.name %> 
+      by
+      <%= bean.roaster %></h3>
+    <p class="info-rev">Origin: <%= bean.origin %></p>
+    <p class="info-rev">Region: <%= bean.region %></p>
+    <p class="info-rev">Varietal: <%= bean.varietal %></p>
+    <p class="info-rev">Tasting Notes: <%= bean.tasting %></p>
       <h3>Reviews</h3>
       <% bean.reviews.forEach(rev => { %>
         <div id="review">

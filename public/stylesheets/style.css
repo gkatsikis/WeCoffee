@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* The Universal Selector */
@@ -17,10 +20,15 @@ html {
 }
 
 body {
-  background-color: gray;
-  /* Use a system font, if none are available use an available sans-sarif font */
+  background-color: rgb(105, 105, 105);
   font-family: 'Sansita Swashed', cursive;
+  color: rgb(97, 56, 3);
   margin: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2017/09/10/01/28/coffee-2734123_960_720.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -29,12 +37,22 @@ nav {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
+  background-image: url("https://cdn.pixabay.com/photo/2015/01/31/20/11/coffee-618858_960_720.jpg");
 }
 
 .nav-bar {
   padding: 30px;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+.nav {
+  text-decoration: none;
+  padding: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: whitesmoke;
 }
 
 main {
@@ -60,4 +78,50 @@ h1 {
 .bean-keys {
   font-weight: bold;
   font-family: 'Sansita Swashed', cursive;
+  font-size: 2rem;
+  padding: 20px;
+
+}
+
+.bean-key {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.all-beans {
+  text-align: center;
+}
+
+.info {
+  font-size: 2rem;
+  text-align: left;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.info-rev {
+  font-size: 2rem;
+  text-align: left;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.info-top {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.bean-review-name {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 15px;
 }
