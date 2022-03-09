@@ -10,12 +10,12 @@
     <p class="info-rev">Region: <%= bean.region %></p>
     <p class="info-rev">Varietal: <%= bean.varietal %></p>
     <p class="info-rev">Tasting Notes: <%= bean.tasting %></p>
-      <h3>Reviews</h3>
+      <h3 class="rev-title">Reviews</h3>
       <% bean.reviews.forEach(rev => { %>
         <div id="review">
-          <p id="review-owner"><%= rev.owner.name %></p>
-          <p>Rating: <%= rev.rating %> </p>
-          <p>Review: <%= rev.content %> </p>
+          <p class="rev-profile"><%= rev.owner.name %></p>
+          <p class="rev">Rating: <%= rev.rating %> </p>
+          <p class="rev">Review: <%= rev.content %> </p>
           <% if (rev.owner.equals(user?.profile._id)) { %>
       <form action="/beans/<%= rev._id %>/edit" method="GET">
         <button class="btn" type="submit">edit review</button>

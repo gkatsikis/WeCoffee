@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,12 +33,14 @@ body {
 }
 
 nav {
-  background-color: white;
   font-family: 'Sansita Swashed', cursive;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
   background-image: url("https://cdn.pixabay.com/photo/2015/01/31/20/11/coffee-618858_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .nav-bar {
@@ -124,4 +127,32 @@ h1 {
   font-size: 2.5rem;
   font-weight: bold;
   padding-left: 15px;
+}
+
+.rev-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color:rgb(73, 42, 1);
+  font-family: 'Lora', serif;
+}
+
+.rev-profile {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.rev {
+  font-size: 1.5rem;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+}
+
+#review {
+  background: radial-gradient(rgb(107, 2, 2), rgb(129, 47, 0),rgb(170, 64, 3), rgb(187, 101, 2));
+  border: 3px solid rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  color: whitesmoke;
+  width: 33%;
 }
