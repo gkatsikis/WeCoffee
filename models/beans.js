@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const coffeeSchema = new Schema({
-  name: String, //required
-  roaster: String, //required
-  origin: String, //required
+  name: { type: String, required: true},
+  roaster: { type: String, required: true},
+  origin: { type: String, required: true},
   region: String,
   varietal: [String],
   tasting: [String],
