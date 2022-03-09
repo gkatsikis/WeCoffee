@@ -15,6 +15,8 @@ router.post('/:id', isLoggedIn, beansCtrl.createReview)
 router.get('/:id/edit', isLoggedIn, beansCtrl.edit)
 // PUT localhost:3000/beans/:id
 router.put('/:id', isLoggedIn, beansCtrl.update)
+// DELETE localhost:3000/beans/:id
+router.delete('/:id', isLoggedIn, beansCtrl.delete)
 
 export {
   router

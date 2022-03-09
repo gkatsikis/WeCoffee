@@ -10,7 +10,6 @@ const coffeeSchema = new Schema({
   varietal: [String],
   tasting: [String],
   reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review"}],
- 
 })
 
 const Coffee = mongoose.model('Coffee', coffeeSchema)
