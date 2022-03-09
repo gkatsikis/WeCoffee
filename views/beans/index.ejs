@@ -15,11 +15,11 @@
     <a 
       href="/beans/<%= bean._id %>" 
     class="info">Reviews</a>
-    <% if (review.owner.equals(user?.profile._id)) { %>
+    <% if (bean.beansOwner.equals(user.profile._id)) { %>
       <form action="/beans/<%= bean._id %>?_method=DELETE" method="POST">
-        <button type="submit" class="btn">delete coffee</button>
+        <button type="submit">delete <%= bean.name %></button>
       </form>
-    <% } %>
+      <% } %>
   <% }) %>
   </ul>
 </section>

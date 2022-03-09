@@ -25,7 +25,7 @@
         <% }) %>
     <% if (user) { %>
       <h3>add a review</h3>
-      <form action='/beans/<%= review._id %>' method="POST">
+      <form action='/beans/<%= bean._id %>' method="POST">
         <label for="rating-select"> Rating:
         </label>
         <select name="rating" id="rating-select">
@@ -41,7 +41,6 @@
         <button type="submit" class="button">share your review</button>
       </form>
       <% } %>
-    
   </ul>
 
 </section>

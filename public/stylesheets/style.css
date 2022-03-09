@@ -78,6 +78,13 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.please-login {
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
 .bean-keys {
   font-weight: bold;
   font-family: 'Sansita Swashed', cursive;

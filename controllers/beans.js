@@ -9,7 +9,7 @@ function index(req, res) {
   .then(beans => {
     res.render('beans/index', {
       beans,
-      review: specificBeans.reviews,
+      review: beans.reviews,
       title: 'All Beans'
     })
   })
@@ -20,7 +20,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  req.body.owner = req.user.profile._id
+  req.body.beansOwner = req.user.profile._id
   Coffee.create(req.body)
   .then(bean => {
     res.redirect('/')
@@ -97,17 +97,16 @@ function update(req, res) {
 }
 
 function deleteBeans(req, res) {
-  Beans.findById(req.params.id)
+  Coffee.findByIdAndDelete(req.params.id)
   .then(bean => {
-    if (bean.owner.equals(req.user.profile._id)) {
-      bean.delete()
-      .then(() => {
+    // if (bean.beansOwner.equals(req.user.profile._id)) {
+    //   bean.delete()
+    //   .then(() => {
         res.redirect('/beans')
       })
-    } else {
-      throw new Error ('Not authorized to delete')
-    }
-  })
+    // } else {
+    //   throw new Error ('Not authorized to delete')
+    // }
   .catch(err => {
     console.log(err)
     res.redirect('/beans')
