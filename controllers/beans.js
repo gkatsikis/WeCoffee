@@ -65,11 +65,11 @@ function show(req, res) {
   }
 
   function edit(req, res) {
-    Review.findById(req.params.id)
-    .then(review => {
-      console.log('LOOOOOOOOK LOOOOOOOOOOOOOOOOOOOOK', review._id)
+    Coffee.findById(req.params.id)
+    .then(coffee => {
+      console.log('LOOOOOOOOK LOOOOOOOOOOOOOOOOOOOOK', coffee)
       res.render('beans/edit', {
-        review,
+        reviews: coffee.reviews,
         title: "edit"
     })
   })
