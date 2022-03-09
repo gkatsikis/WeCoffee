@@ -19,13 +19,13 @@ html {
 body {
   background-color: gray;
   /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Sansita Swashed', cursive;
   margin: 0;
 }
 
 nav {
   background-color: white;
+  font-family: 'Sansita Swashed', cursive;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -35,10 +35,6 @@ nav {
   padding: 30px;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.logout {
-
 }
 
 main {
@@ -59,4 +55,9 @@ h1 {
 #review-owner {
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bean-keys {
+  font-weight: bold;
+  font-family: 'Sansita Swashed', cursive;
 }

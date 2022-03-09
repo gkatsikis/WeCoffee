@@ -67,7 +67,6 @@ function show(req, res) {
   function edit(req, res) {
     Coffee.findById(req.params.id)
     .then(coffee => {
-      console.log('LOOOOOOOOK LOOOOOOOOOOOOOOOOOOOOK', coffee)
       res.render('beans/edit', {
         reviews: coffee.reviews,
         title: "edit"
