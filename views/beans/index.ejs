@@ -5,16 +5,18 @@
   <h1 class="info-top">All the Beans</h1>
 	<ul class="beans">
   <% beans.forEach(bean => { %>
+    <div class="bean-box">
     <h3 class="info-name"><%= bean.name %> 
-    by
-    <%= bean.roaster %></h3>
-    <p class="info">Origin: <%= bean.origin %></p>
-    <p class="info">Region: <%= bean.region %></p>
-    <p class="info">Varietal: <%= bean.varietal %></p>
-    <p class="info">Tasting: <%= bean.tasting %></p>
-    <a 
+      by
+      <%= bean.roaster %></h3>
+      <p class="info">Origin: <%= bean.origin %></p>
+      <p class="info">Region: <%= bean.region %></p>
+      <p class="info">Varietal: <%= bean.varietal %></p>
+      <p class="info">Tasting: <%= bean.tasting %></p>
+      <a 
       href="/beans/<%= bean._id %>" 
-    class="info">Reviews</a>
+    class="reviews-button">Reviews</a>
+    </div>
     <% if (user) { %>
     <% if (bean.beansOwner.equals(user.profile._id)) { %>
       <form action="/beans/<%= bean._id %>?_method=DELETE" method="POST">

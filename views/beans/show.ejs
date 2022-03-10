@@ -18,7 +18,7 @@
           <p class="rev">Review: <%= rev.content %> </p>
           <% if (rev.owner.equals(user?.profile._id)) { %>
       <form action="/beans/<%= rev._id %>/edit" method="GET">
-        <button class="btn" type="submit">edit review</button>
+        <button class="button" type="submit">edit review</button>
       </form>
       <% } %>
         </div>

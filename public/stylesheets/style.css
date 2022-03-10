@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -106,10 +104,9 @@ h1 {
 }
 
 .bean-keys {
-  font-family: 'Bebas Neue', cursive;cursive;
+  font-family: 'Bebas Neue', cursive;
   font-size: 2rem;
   padding: 20px;
-
 }
 
 .bean-key {
@@ -135,6 +132,8 @@ h1 {
 }
 
 .button {
+  display: grid;
+  letter-spacing: .5rem;
   background-color: #c75000;
   border: none;
   color: white;
@@ -143,7 +142,6 @@ h1 {
   text-decoration: none;
   font-size: 16px;
   font-family: 'Bebas Neue', cursive;
-  margin-left: 25%;
 }
 
 .info {
@@ -152,6 +150,21 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   padding-left: 15px;
+  display: block;
+  width: 33%;
+}
+
+.reviews-button {
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 15px;
+  display: block;
+  width: 33%;
+}
+
+.bean-box {
   display: block;
 }
 
@@ -176,6 +189,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: bold;
   padding-left: 15px;
+  width: 33%;
 }
 
 .bean-review-name {
@@ -205,7 +219,10 @@ h1 {
 }
 
 #review {
-  background: radial-gradient(rgb(107, 2, 2), rgb(129, 47, 0),rgb(170, 64, 3), rgb(187, 101, 2));
+  background-color: radial-gradient(circle at center, #260701, #2f0e07, #38160d, #411d13, 
+  #4a2419, #532c1e, #5c3324, #653a2a, #6e4230, #774936);
+  background: radial-gradient(circle at center, #260701, #2f0e07, #38160d, #411d13, 
+  #4a2419, #532c1e, #5c3324, #653a2a, #6e4230, #774936);
   border: 3px solid rgb(255, 255, 255);
   text-align: center;
   justify-content: center;
