@@ -24,9 +24,11 @@
     <div class="nav-bar">
     <a 
     href="/" <%- title === 'Home' ? 'class="active"' : '' %> class="nav">home</a>  
+    <% if (user) { %>
     <a 
-    href="" <%- title === 'Profile' ? 'class="active"' : '' %>
+    href="/profile" <%- title === 'Profile' ? 'class="active"' : '' %>
     class="nav">profile</a>
+    <% } %>
     <a 
     href="/beans" <%- title === 'All Beans' ? 'class="active"' : '' %>
     class="nav">all beans</a>
