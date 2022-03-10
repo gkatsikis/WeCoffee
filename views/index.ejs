@@ -15,18 +15,18 @@
   <% } %>
   <h2 class="add-beans">Add Some Beans</h2>
   <p class="required">* designates required field</p>
-  <form action="/beans" method="POST">
+  <form action="/beans" method="POST" class="bean-form">
     <label class="bean-keys"> *Name:
-      <input type="text" name="name" id="bname" placeholder="What's it called?" class="bean-key" required>
+      <input type="text" name="name" id="bname" class="bean-key" placeholder="e.g. El Cascajal" required>
     </label><br>
     <label class="bean-keys"> *Roaster:
-      <input type="text" name="roaster" id="roaster" placeholder="Anything but Starbucks" class="bean-key" required>
+      <input type="text" name="roaster" id="roaster" placeholder="e.g. Sey Coffee" class="bean-key" required>
     </label><br>
     <label class="bean-keys"> *Origin:
-      <input type="text" name="origin" id="origin" placeholder="Country" class="bean-key" required>
+      <input type="text" name="origin" id="origin" placeholder="e.g. Colombia" class="bean-key" required>
     </label><br>
     <label class="bean-keys"> Region:
-      <input type="text" name="region" id="region" placeholder="Where within the country?" class="bean-key">
+      <input type="text" name="region" id="region" placeholder="e.g. Huila" class="bean-key">
     </label><br>
     <label class="bean-keys"> Varietal(s):
       <input type="text" name="varietal" id="varietal" placeholder="separated by ', '" class="bean-key">

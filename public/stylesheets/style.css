@@ -90,9 +90,12 @@ h1 {
   padding-top: 200px;
 }
 
+.bean-form {
+
+}
+
 .bean-keys {
-  font-weight: bold;
-  font-family: 'Sansita Swashed', cursive;
+  font-family: 'Bebas Neue', cursive;cursive;
   font-size: 2rem;
   padding: 20px;
 
@@ -100,8 +103,8 @@ h1 {
 
 .bean-key {
   padding: 20px;
-  border-radius: 10px;
-  border: 2px solid black;
+  border: none;
+  display: block;
 }
 
 .all-beans {
@@ -110,10 +113,11 @@ h1 {
 
 .add-beans {
   font-size: 25px;
+  
 }
 
 #roaster {
-  margin: 2rem;
+  margin: 0 0 2rem 2rem;
 }
 
 #bname {
@@ -121,19 +125,19 @@ h1 {
 }
 
 #origin {
-  margin: 2rem;
+  margin: 0 0 2rem 2rem;
 }
 
 #region {
-  margin: 2rem;
+  margin: 0 0 2rem 2rem;
 }
 
 #varietal {
-  margin: 2rem;
+  margin: 0 0 2rem 2rem;
 }
 
 #tasting {
-  margin: 2rem;
+  margin: 0 0 2rem 2rem;
 }
 
 .required {
@@ -149,9 +153,9 @@ h1 {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  align-items: center;
+  font-family: 'Bebas Neue', cursive;
+  margin-left: 25%;
 }
 
 .info {
