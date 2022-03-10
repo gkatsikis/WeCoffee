@@ -3,7 +3,7 @@
 
 <main>
   <% if (user) { %>
-  <h1>Welcome, <%= user ? user.profile.name : "Coffee Tribe" %></h1>
+  <h1><%= user ? user.profile.name : "Coffee Tribe" %>'s Coffee Life</h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
