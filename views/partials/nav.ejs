@@ -5,14 +5,12 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/auth/logout">
-        <button class="mdc-button mdc-button--raised mdc-button--leading" class="logout" type="submit">
-          <span class="logout" class="mdc-button__ripple"></span>
+      <a href="/auth/logout" class="anchor">
+        <button class="mdc-button mdc-button--raised mdc-button--leading" id="logout" type="submit">
+          <!-- <span class="logout" class="mdc-button__ripple"></span> -->
           <i  class="material-icons mdc-button__icon" aria-hidden="true">logout</i>
           <span class="mdc-button__label">logout</span>
         </button>
-        <!-- <button type="submit" class="logout"><span class="material-icons-outlined">logout
-          </span></button> -->
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
