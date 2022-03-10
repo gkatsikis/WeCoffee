@@ -1,6 +1,6 @@
 # WeCoffee
 
-![Site Image]()
+![Site Image](https://i.imgur.com/QRX008u.png)
 
 [Try it out](https://wecoffee.herokuapp.com/)
 
