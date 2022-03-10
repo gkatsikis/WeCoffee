@@ -113,7 +113,19 @@ function deleteBeans(req, res) {
   })
 }
 
+function profileIndex(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    res.render('profile/index', {
+      profile,
+      review: profile.reviews,
+      title: 'Your Reviews'
+  })
+})
+}
+
 export {
+  profileIndex,
   deleteBeans as delete,
   update,
   edit,
