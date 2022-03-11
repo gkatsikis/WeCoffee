@@ -99,14 +99,8 @@ function update(req, res) {
 function deleteBeans(req, res) {
   Coffee.findByIdAndDelete(req.params.id)
   .then(bean => {
-    // if (bean.beansOwner.equals(req.user.profile._id)) {
-    //   bean.delete()
-    //   .then(() => {
         res.redirect('/beans')
       })
-    // } else {
-    //   throw new Error ('Not authorized to delete')
-    // }
   .catch(err => {
     console.log(err)
     res.redirect('/beans')
