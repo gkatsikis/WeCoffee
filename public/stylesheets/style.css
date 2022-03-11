@@ -142,6 +142,7 @@ h1 {
   text-decoration: none;
   font-size: 16px;
   font-family: 'Bebas Neue', cursive;
+  cursor: pointer;
 }
 
 .info {
@@ -236,4 +237,10 @@ h1 {
   color: whitesmoke;
   width: 33%;
   margin: 1rem 1rem 1rem 0;
+}
+
+#edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -5,13 +5,15 @@
 [Try it out](https://wecoffee.herokuapp.com/)
 
 
-I made this for my cousin who got me into specialty coffee. He has an excel sheet with these criteria of logging and reviewing coffee. This creates a more pleasant UI/UX for him to interact with as he logs the coffees and analyzes them. 
+I made this for my cousin who got me into specialty coffee. He has an excel sheet with these criteria of logging and reviewing coffee. The criteria are roaster, origin, region, varietal, tasting notes, and review. This creates a more pleasant UI/UX for him to interact with as he logs the coffees and analyzes them. 
 
 I thought it would be a gift to the specialty coffee community to be able to log and review their favorite coffees and give us all an outlet to determine what kind of coffee we have tried and enjoyed.
 
 Future functionality would include search function by roaster, origin, tasting notes, and varietals. In addition scores will be aggregated so it can serve as a guide for people new to the specialty coffee area what is considered generally 'good'.
 
 Additional pages would be made to feature roaster information and perhaps even a coffee shop guide that would 
+
+[Trello Planning Page](https://trello.com/b/2K2bslmy/unit-2-proposal)
 
 ## Technologies Used:
 
@@ -42,3 +44,5 @@ Additional pages would be made to feature roaster information and perhaps even a
 [Hero Patterns](https://heropatterns.com/)
 
 Pixabay [photo](https://pixabay.com/photos/leaves-coffee-cup-still-life-book-1076307/) by josealbafotos
+
+Color Pallete inspired by [Coolors](https://coolors.co/palettes/trending)

@@ -4,16 +4,17 @@
 <section>
   <h1>edit your review</h1>
   <form action="/beans/<%= review._id %>?_method=PUT" method="POST">
-    <label>
+    <label class="bean-keys">
       Name: 
       <input 
         type="text"
         name="content" 
         value="<%= review.content %>" 
         autocomplete="off"
+        class="bean-key"
       >
     </label>
-    <button type="submit">Save</button>
+    <button type="submit" class="button" id="edit-button">Save</button>
   </form>
 </section>
 
