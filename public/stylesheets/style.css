@@ -165,7 +165,13 @@ h1 {
 }
 
 .bean-box {
-  display: block;
+  display: flex;
+  border: 5px solid whitesmoke;
+  text-align: center;
+  margin: 2rem;
+  letter-spacing: .1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-rev {
@@ -229,4 +235,5 @@ h1 {
   justify-content: center;
   color: whitesmoke;
   width: 33%;
+  margin: 1rem 1rem 1rem 0;
 }
